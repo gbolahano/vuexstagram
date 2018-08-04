@@ -33,4 +33,13 @@ h1 {
   text-shadow: 0px 4px 0 rgba(18, 86, 136, 0.11);
   color: #125688;
 }
+.btn-outline-primary {
+  border-color: #125688;
+}
+.btn {
+  color: #125688;
+}
+.btn:hover {
+  color: white;
+}
 </style>
