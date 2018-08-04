@@ -123,7 +123,7 @@ const posts = [
     "caption": "Some major audio upgrades coming to my next videos 😍",
     "likes": 39,
     "id": "1132002270913873708",
-    "display_src": "http://lorempixel.com/400/400g",
+    "display_src": "http://lorempixel.com/400/400",
   },
   {
     "code": "-pjx-gQcVi",
