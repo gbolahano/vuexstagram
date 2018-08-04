@@ -14,6 +14,11 @@ export default new Vuex.Store({
     },
     setComments(state, comments) {
       state.comments = comments;
+    },
+    increasePostLikes(state, index) {
+      let posts = [...state.posts];
+      let likeInc = posts[index].likes + 1;
+      state.posts[index].likes = likeInc;
     }
   },
   actions: {
@@ -22,9 +27,12 @@ export default new Vuex.Store({
     },
     fetchComments(context, comments) {
       context.commit('setComments', comments);
+    },
+    incrementPostLikes(context, index) {
+      context.commit('increasePostLikes', index);
     }
   },
   getters: {
-    
+
   }
 })

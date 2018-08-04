@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 mt-2" v-for="(post, index) in posts" :key="index">
-          <Photo :caption="post.caption" :displaySrc="post.display_src"
+          <Photo :caption="post.caption" :displaySrc="post.display_src" :index="index"
             :code="post.code" :likes="post.likes" :comments="commentLength(post.code)" />
       </div>
     </div>

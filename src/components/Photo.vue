@@ -8,7 +8,7 @@
             {{ caption }}
           </div>
         </router-link>
-        <button class="btn btn-sm btn-outline-primary">
+        <button v-on:click="likeInc(index)" class="btn btn-sm btn-outline-primary">
           <i class="far fa-thumbs-up"></i>
           {{ likes }} likes
         </button>
@@ -23,7 +23,12 @@
 
 <script>
 export default {
-  props: ['caption', 'displaySrc', 'code', 'likes', 'comments']
+  props: ['caption', 'displaySrc', 'code', 'likes', 'comments', 'index'],
+  methods: {
+    likeInc(index) {
+      this.$store.dispatch('incrementPostLikes', index);
+    }
+  }
 }
 </script>
 
