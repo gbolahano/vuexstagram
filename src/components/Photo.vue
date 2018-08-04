@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="card">
-      <img class="card-img-top" :src="displaySrc" alt="">
+      <img class="card-img-top" :src="displaySrc" :alt="caption">
       <div class="card-body">
-        <div class="card-text">
-          {{ caption }}
-        </div>
+        <router-link :to="'/view/' + code">
+          <div class="card-text">
+            {{ caption }}
+          </div>
+        </router-link>
         <button class="btn btn-sm btn-outline-primary">
           <i class="far fa-thumbs-up"></i>
           likes
@@ -21,7 +23,7 @@
 
 <script>
 export default {
-  props: ['caption', 'displaySrc']
+  props: ['caption', 'displaySrc', 'code']
 }
 </script>
 

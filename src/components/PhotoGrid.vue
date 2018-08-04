@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 mt-3" v-for="(post, index) in posts" :key="index">
-        <Photo :caption="post.caption" :displaySrc="post.display_src" />
+        <Photo :caption="post.caption" :displaySrc="post.display_src" :code="post.code" />
       </div>
     </div>
   </div>
