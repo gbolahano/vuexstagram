@@ -1,8 +1,11 @@
 <template>
-  <div class="photo-grid">
-    <Photo />
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mt-3" v-for="(post, index) in posts" :key="index">
+        <Photo :caption="post.caption" :displaySrc="post.display_src" />
+      </div>
+    </div>
   </div>
-
 </template>
 
 <script>
@@ -10,9 +13,9 @@ import Photo from './Photo'
 import posts from '../data/posts';
 import comments from '../data/comments';
 export default {
-  data () {
-    return {
-
+  computed: {
+    posts() {
+      return this.$store.state.posts;
     }
   },
   components: {
