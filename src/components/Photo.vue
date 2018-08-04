@@ -10,7 +10,7 @@
         </router-link>
         <button class="btn btn-sm btn-outline-primary">
           <i class="far fa-thumbs-up"></i>
-          likes
+          {{ likes }} likes
         </button>
         <button class="btn btn-sm btn-outline-primary">
           <i class="far fa-comment"></i>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  props: ['caption', 'displaySrc', 'code']
+  props: ['caption', 'displaySrc', 'code', 'likes']
 }
 </script>
 
