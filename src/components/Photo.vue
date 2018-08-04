@@ -14,7 +14,7 @@
         </button>
         <button class="btn btn-sm btn-outline-primary">
           <i class="far fa-comment"></i>
-          comments
+          {{ comments }} comments
         </button>
       </div>
     </div>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  props: ['caption', 'displaySrc', 'code', 'likes']
+  props: ['caption', 'displaySrc', 'code', 'likes', 'comments']
 }
 </script>
 
